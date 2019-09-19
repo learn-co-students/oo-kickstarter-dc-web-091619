@@ -1,29 +1,16 @@
 class Backer
+    attr_reader :name
+    attr_accessor :backed_projects
+       def initialize(name)
+           @name = name
+           @backed_projects = []
+       end
+       def back_project(project)
+           self.backed_projects << project
+           project.backers << self
+       end
+    end
 
-    attr_reader :list_of_backed_projects, :name
-
-def initialize (name)
-    @name=name
-    @list_of_backed_projects = []
-end
-
-
-def back_project(new_project)
-    list_of_backed_projects<<new_project
-    new_project.add_backer(self)
-end
-
-
-
-
-
-
-
-
-
-
-
-end
 
 
 
