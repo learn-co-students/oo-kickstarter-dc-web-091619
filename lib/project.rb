@@ -1,18 +1,18 @@
 require 'pry'
 class Project
 
-    attr_reader :title, :backers
+    attr_reader :title, :new_backer
 
     
     def initialize (title)
-        @backers = []
+        @list_of_projects_backers = []
         @title = title
     end
 
 
-    def add_backer(backer)
-        backers<<backer
-        backer.backed_projects<<self
+    def add_backer(new_backer)
+        list_of_projects_backers<<new_backer
+        new_backer.list_of_backed_projects<<self
     end
 
 
