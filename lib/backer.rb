@@ -17,3 +17,5 @@ class Backer
         binding.pry
     end
 end
+
+# possibly create third class to mediate between backer and project classes
