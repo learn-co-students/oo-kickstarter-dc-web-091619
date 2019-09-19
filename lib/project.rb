@@ -6,7 +6,8 @@ class Project
     end
     
     #def backers
-    #    
+    #    Backer.all.select do |backer|
+    #    backer.backed_projects.include?(self)
     #end
 
     def add_backer(backer)
